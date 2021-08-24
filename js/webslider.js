@@ -7,8 +7,8 @@ stackedCard.init();
 
 
 $('body').on('click', '#card-middle', function(e) {
-    document.getElementById("card-left").style.cssText = "transform-origin: center bottom; transform: translate(-100%, 0%) scale(0.8) rotate(-10deg); z-index: 11;"
-    document.getElementById("card-right").style.cssText = "transform-origin: center bottom;transform: translate(0%, 0%) scale(0.8) rotate(10deg);z-index: 9;"
+    document.getElementById("card-left").style.cssText = "transform-origin: center bottom; transform: translate(-100%, 0%) scale(0.8) rotate(-10deg);"
+    document.getElementById("card-right").style.cssText = "transform-origin: center bottom;transform: translate(0%, 0%) scale(0.8) rotate(10deg);"
 });
 
 

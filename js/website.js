@@ -129,6 +129,10 @@
                 els[i].style.zIndex = z
             }
         };
+
+
+
+
         stackedCards.prototype.detectSwipe = function() {
             var me = this;
             var regionEl = document.querySelector(me.config.selector);
@@ -152,20 +156,23 @@
                 restraint = 100,
                 allowedTime = 300,
                 elapsedTime, startTime, handleswipe = callback || function(swipedir) {};
-            touchsurface.addEventListener("touchstart", function(e) {
-                var touchobj = e.changedTouches[0];
+            // touchsurface.addEventListener("touchstart", function(e) {  //ex code
+            touchsurface.addEventListener("click", function(e) {
+                // var touchobj = e.changedTouches[0];
                 swipedir = "none";
                 dist = 0;
-                startX = touchobj.pageX;
-                startY = touchobj.pageY;
+                // startX = touchobj.pageX;
+                // startY = touchobj.pageY;
                 startTime = (new Date).getTime();
                 e.preventDefault()
             }, false);
-            touchsurface.addEventListener("touchmove", function(e) {}, false);
-            touchsurface.addEventListener("touchend", function(e) {
-                var touchobj = e.changedTouches[0];
-                distX = touchobj.pageX - startX;
-                distY = touchobj.pageY - startY;
+            // touchsurface.addEventListener("touchmove", function(e) {}, false); //ex code
+            // touchsurface.addEventListener("touchend", function(e) {  //ex code
+            touchsurface.addEventListener("click", function(e) {}, false);
+            touchsurface.addEventListener("click", function(e) {
+                // var touchobj = e.changedTouches[0];
+                // distX = touchobj.pageX - startX;
+                // distY = touchobj.pageY - startY;
                 elapsedTime = (new Date).getTime() - startTime;
                 if (elapsedTime <= allowedTime) { if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) { swipedir = distX < 0 ? "left" : "right" } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) { swipedir = distY < 0 ? "up" : "down" } }
                 handleswipe(swipedir);

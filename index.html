@@ -42,6 +42,18 @@
             }
         }
         
+        @media (max-width: 1280px) {
+            .stacked-cards li {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .stacked-cards li {
+                width: 80%;
+            }
+        }
+        
         .stacked-cards li {
             border-radius: 20px;
         }
@@ -82,6 +94,13 @@
     <!-- main two javascript files for the card slider  -->
     <script src="js/website.js"></script>
     <script src="js/webslider.js"></script>
+
+    <script>
+        $("#card-right").click(function() {
+            // alert("holla");
+        })
+    </script>
+
 </body>
 
 </html>
