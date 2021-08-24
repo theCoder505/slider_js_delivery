@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <!-- website default bootstrap cdn  -->
+    <link href="https://my.studycard.com/css/min.css" rel="stylesheet">
+    <!-- this was pre-css link is for the stacked cards  -->
+    <link href="https://my.studycard.com/css/stack.css" rel="stylesheet">
+
+
+    <!-- custom old and new mashup css  -->
+    <style>
+        .hdr {
+            width: 100%;
+            color: #fff;
+        }
+        
+        .hdr .bg-overlay {
+            background-color: #CC3C03B3;
+            padding: 2rem 0;
+            height: 100vh;
+        }
+        
+        .stacked-cards {
+            margin: 4rem 0;
+        }
+        
+        .stacked-cards img {
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+        
+        @media (min-width: 1280px) {
+            .bg-video {
+                top: 15%;
+            }
+            .stacked-cards ul {
+                max-width: 80% !important;
+                height: 165px !important;
+            }
+        }
+        
+        .stacked-cards li {
+            border-radius: 20px;
+        }
+    </style>
+
+    <title>RCMS Student Rewards Program</title>
+
+</head>
+
+<body>
+
+
+
+
+    <div class="hdr">
+        <div class="bg-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <div class="stacked-cards">
+                            <ul id="cardUl">
+                                <li class="jsCards runInterval" id="card-left"><img src="//my.studycard.com/storage/qL5mpKotaj0LgEPe6oFqK2ZQihrSAAbU2oqNOKqN.png" width="360" height="206"></li>
+                                <li class="jsCards" id="card-middle"><img src="//my.studycard.com/storage/HlVCpBOaj4i0bM4v07vfRyfzS10IH02PMtRabIRw.png" width="360" height="206"></li>
+                                <li class="jsCards" id="card-right"><img src="//my.studycard.com/storage/viyuV5dP5bk9Gvb3QsQGG7CmM4IuwVvl9iZHdZOO.png" width="360" height="206"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- main two javascript files for the card slider  -->
+    <script src="js/website.js"></script>
+    <script src="js/webslider.js"></script>
+</body>
+
+</html>
