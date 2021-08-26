@@ -12,7 +12,8 @@ $('body').on('click', '#card-middle', function(e) {
 });
 
 
-setInterval(function() {
+
+function slideInOut() {
 
     if (document.getElementsByClassName("jsCards")[0].classList.contains("runInterval")) {
         document.getElementsByClassName("jsCards")[1].classList.add("runInterval");
@@ -28,5 +29,11 @@ setInterval(function() {
         document.querySelector(".runInterval").click();
     }
 
+};
 
-}, 6000);
+var intervalFunc = setInterval(slideInOut, 6000);
+
+$(".jsCards").click(function() {
+    clearInterval(intervalFunc);
+    intervalFunc = setInterval(slideInOut, 6000);
+});
